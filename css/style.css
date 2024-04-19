@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;/*para generar espacio alrededor de los elementos*/
+    box-sizing: border-box;/*permite incluir/ajustar el padding y el margin sin pasar la dimensión*/
+    
+}
+body{
+    height: 100%;/***/
+    background-color: #fff;
+    color:black;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif; /* Open Sans para el cuerpo */;
+    
+}
+main{
+    margin: 100px 20%;
+}
+
+/******TIPOGRAFIA**********/
+
+h1, h2{
+    font-size: 56px; /* Tamaño de fuente para h1 en pantalla grande */
+    font-weight: bold; /* Texto en negrita */
+}
+/***TEXTO RECURSOS***/
+h5{
+    letter-spacing: 0.10em;
+    font-weight: 700;
+    font-size: 12px;
+}
+/***TEXTO BUTTON***/
+/*span{
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0.10em;/*espacio entre letras*/
+/*}*/
+/****TABLA******/
+table {
+    margin:auto;
+}
+
+th {
+    height: 70px;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+td {
+ padding:20px;
+
+ border-bottom: 1px solid black;
+}
+
+/****HEADER******/
+.header-container{
+    background-image: url("/img/chica---lateral---inicio.png");/*<---IMAGEN ****/
+    background-color: #f1f1f1 ;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 590px 700px;
+    position: relative;
+    height: 700px;
+}
+/*****NAVEGADOR******/
+.navigation{
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0 ;
+    padding: 2em;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+}
+.nav-links{
+    display: flex;
+}
+.nav-links{
+  
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+.column{
+    flex-direction: column;
+    text-align: center;
+}
+/******CONTENEDOR PADRE*****/
+/*.container{
+    border: 2px solid greenyellow;
+    width: auto;/*100%*//*
+    margin: auto;
+    padding: 10px;
+    height: 700px;
+    background-color:#f1f1f1 ;
+    justify-content: center;
+    display: flex;
+    
+}*/
+.box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    width: 400px;
+}
+
+/*****CAROUSEL*******/
+.container-row{
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 20px;
+    justify-content: center;/*****controla la alineación de todos los elementos en el eje principal*****/
+    align-items: center;/****controla la alineación de todos los elementos en el eje transversal****/
+    overflow: hidden;
+}
+/****TARJETAS****/
+.card{
+    width: 170px;
+    height: 290px;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 700px;
+    /*border: 2px solid;*/
+    justify-content: center;
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box padding-box, 
+    linear-gradient(-225deg, rgb(117, 240, 148), rgb(117, 178, 240)) border-box border-box;
+    border: 2px solid transparent;
+
+}
+.img-card{
+    transform: translate(0%, -40%);
+    height: 80px;
+    width: auto;
+}
+
+/*****CONTENEDOR PADRE DE TABLA****/
+/*.container-tabla {
+    border: 2px solid greenyellow;
+    width: auto;/*100%*//*
+    margin: auto;
+    padding: 10px;
+    height: 700px;
+    justify-content: center;
+
+}*/
+.div1 { 
+    margin: auto;
+    overflow: auto;
+}
+/**************/
+/*****CONTENEDOR PADRE*******/        
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    overflow: hidden;
+}
+/***IMAGEN DE GRID****/
+.img-grid{
+    border-radius: 30px;
+    width: 570px;
+   /*float: left;*/
+    margin-left: 30px;
+    display: grid;
+
+}
+.text-grid{
+    margin: 0px  90px 0px 50px; /*tercer valor abajo*/
+    display:grid;
+   
+}
+
+.grid-container > div {/* > se aplica a TODOS los elementos DIV QUE ESTAN contenidos DENTRO de GRID-CONTAINER*/
+    justify-content: center;
+    padding: 100px 0px;
+    border: 1px solid ;
+    
+}
+/************/
+.nav-links a{
+    font-size: 12px;
+    padding: 5px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+    /* padding: 8px; */
+    color: black;
+    text-decoration: none;
+    /*letter-spacing: .115em;*/
+}
+.nav-links a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+/*.icons{
+ height: 18px;
+ width: auto ;
+ padding-right: 5px;
+ 
+}*/
+
+#button{
+    border-radius: 40px;
+    padding: 0 25px;
+    margin: 40px 35px;
+    align-items: center;
+    display:inline-flex;
+    height: 75px;
+    background: linear-gradient(rgb(241, 241, 241) , rgb(241, 241, 241)) padding-box padding-box, 
+    linear-gradient(-225deg, rgb(117, 240, 148), rgb(117, 178, 240)) border-box border-box;
+    border: 3px solid transparent;
+}
+/*****TAMAÑO LOGO******/
+#logo img{
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    h1, h2 {
+        font-size: 40px; /* Tamaño de fuente para h1 en pantalla pequeña */
+    }
+    body {
+        font-size: 14px; /* Tamaño de fuente para h2-h6 en pantalla pequeña */
+    }
+}
+
+/*****FOOTER****/
+footer{
+    position: relative;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    min-height: 200px;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.logo-footer{
+    height: 50px;
+    width: auto;
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+.footer-separator{
+    width: 150px;
+    height:1px;
+    margin:10px auto;
+    background: #fff ;
+}
+footer a{
+    color: #ffffff;
+  }
+footer p{
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 12px;
+} 
+
+/*****MENU RESPONSIVO******/
+
+/*para poner los hipervinculos en bloque*/
+@media screen and (max-width: 768px) {/*SI el dispositivo es menor a 600px*/
+    .nav-links{
+        display: none;
+    }
+    .hamburger{
+        width:46px;
+        height: 36px;
+        position:absolute;
+        top:18px;
+        right:30px;
+        padding:4px;
+        display:block;
+        z-index:3;
+        cursor:pointer;
+    
+    }
+    .hamburger span{
+        width:100%;
+        height:4px;
+        float:left;
+        margin-bottom:6px;
+        background:#666;
+        display: block;
+        transition: all 0.25s ease;
+        transform-origin: 0px 100%;
+        
+    }
+    .nav-buton:checked ~ .nav-links {
+        display:block;
+
+    }
+    
+     
+    /*****BARRA DE NAVEGACIÓN*****/
+    .nav-links{
+      
+      width: 100%; /*ENTONCES que cada hipervinculo mida un 100%*//*ES EL MISMO RESULTADO QUE PONERLO EN BLOQUE*/
+     /*display:block; *//*DEJAR UNO DE LOS DOS*/
+        margin-top: 0;
+        background-color: #292929;
+        position: absolute;
+        display: block;
+        top: 68px;
+        left: 0%;
+    }
+    /*.nav-links a:hover {
+        
+        color: white;
+        border:1px solid white;
+        border-radius: 0;
+        display: block;
+    }*/
+  }
