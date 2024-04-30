@@ -1,203 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--metadatos/información sobre tu página-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto final</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;
-    0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
     
 </head>
 <body>
     <header class="header-container">
-      <nav class="navigation">
+      <nav class="navigation"><!--NAV-BAR-->
         <a href="index.html" id="logo">
-          <img src="./img/logo  ESTIMAT-03.png" alt="">
+          <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
         </a>
-        <!---hamburger-->
-        <input type="checkbox" class="nav-buton" style= "display: none;">
-        <label for="nav-buton" class="nav-buton">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
+        <!--BOTON HAMBURGUESA el valor checkbox permite activar y desactivar una opcion -->
+        <input type="checkbox" id="menu-check"><!--input crea un campo de entrada/CHEQUEAR/-->
+        <label class="nav-button" for="menu-check"><!--label crea una etiqueta para identificar un elemento de formulario, el BOTON HAMBURGUESA-->
+          <span></span>
+          <span></span>
+          <span></span>
         </label>
-       
-        <ul class="nav-links"><label class="nav-buton">
-          <a href="">¿CÓMO FUNCIONA?</a>
-          <a href="index.html">INICIO</a>
-          <a href="#">NOSOTROS</a>
-          <a href="contact.html">CONTACTO</a></label>
+        <!-- MENU -->
+        <ul class="nav-links">
+          <li><a href="">¿Cómo funciona?</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
         </ul>
       
       </nav>
       
-        <div class="box"><!------COLUMNA----->
-          <h1>Emmanuel<br>
-            la sobredosis<br>de información
-          </h1><!---TITULO H1---->
-        
-          <p>Podemos construir un programa con bases<br>
-            matemáticas que nos ayude a seleccionar la<br>
-            información que realmente nos ayude a vivir mejor<br>
-            ¿parece dificil, no? hicimos la parte complicada<br>
-            para brindarte de manera mas intuitiva el sistema<br>
-            estimat.
-          </p>
-        
-        </div>
-    
-    </header>
-    <section class="main">
-      <div class="container-row">
-        <div class="column">
-          <h2>¿Cómo puede<br> ayudarte Estimat?</h2><!----TITULO H1---->
-        </div>
-      </div>
-      <!--fila-->
-      <div class="container-row">
-
-        <!------PRIMER CARD---------->
-        <div class="card">
-          <img class="img-card" src="./img/Recurso 22.png" alt="">
-          <div>
-            <h5>TOMA DE<br> DECISIONES<br>EFICIENTES</h5>
-      
+        <div class="container-flex">
+          <div class="box1"><!-- COLUMNA -->
+            <h1>Trasciende<br>
+              la sobredosis<br>de información
+            </h1><!-- TITULO H1 -->
+            
           </div>
-        </div>
-        <!------SEGUNDA CARD---------->
-        <div class="card">
-          <img class="img-card" src="./img/Recurso 20.png" alt="">
-          <div>
-            <h5>ALCANZA<br>OBJETIVOS<br> PRECISOS</h5>
-          </div>
-        </div>
-        <!------TERCERA CARD---------->
-        <div class="card">
-          <img class="img-card" src="./img/Recurso 19.png" alt="">
-          <div>
-            <h5>CONSTRUYA<br>TU MOTOR DE<br> MOTIVACIÓN</h5>
-      
-          </div>
-        </div>
-        <!------cuarta CARD---------->
-        <div class="card">
-          <img class="img-card" src="./img/Recurso 18.png" alt="">
-          <div>
-            <h5>REGISTRA<br> Y ACOMPAÑA<br>TU PROGRESO</h5>
-          </div>
-        </div>
-        <!------quinta CARD---------->
-        <div class="card">
-          <img class="img-card" src="./img/Recurso 17.png" alt="">
-          <div>
-            <h5>CREA<br>HÁBITOS<br>SÓLIDOS</h5>
-            <p>
+          <div class="box2">
+            <p>Podemos construir un programa con bases<br>
+              matemáticas que nos ayude a seleccionar la<br>
+              información que realmente nos ayude a vivir mejor<br>
+              ¿parece dificil, no? hicimos la parte complicada<br>
+              para brindarte de manera mas intuitiva el sistema<br>
+              estimat.
             </p>
           </div>
         </div>
-      </div>
-  </section>
-  <section>
-    <div class="container-row">
-      <div class="column">
-        <h2>vamos a construir con base<br>
-          en sus objetivos y motivaciones<br>
-          conceptos como:
-        </h2><!----TITULO H1---->
-      </div>
-    </div>
-    <div class="container-row">
-      <table>
-        <tr>
-          <td>MÉTODO <br>CIENTÍFICO EN LA VIDA
-          </td>
-          <td>
-            <ul>
-              <li>
-                La ciencia es la progresiva aproximación del hombre al mundo real (Max Planck)
-              </li>
-              <br>
-              <li>
-                La gran idea que desentraña los misterios del universo aplicada a la individualidad
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>COGNICIÓN<br>
-            EVOLUTIVA
-          </td>
+        
     
-          <td>
-            <ul>
-              <li>
-                "La incertidumbre es la regla, no la excepción." (Karl Popper)
-              </li>
-              <br>
-              <li>
-                ¿Cómo utilizar la incertidumbre a nuestro favor?
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>PENSAMIENTO <br>
-            CRÍTICO <br>
-            PROBABILÍSTICO </td>
-          </td>
-          <td>
-            <ul>
-              <li>
-                La selección natural ha moldeado nuestras mentes para que estemos adaptados a
-                sobrevivir y reproducirse en entornos específicos. (David M. Buss)
-              </li>
-              <br>
-              <li>
-                La gran idea que desentraña los misterios del universo aplicada a la individualidad
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </div>
-    
-    
-    
-  </section>
+    </header>
+    <main>
+       <!-- CAJA PADRE -->
+      <section>
+        <div class="container-row">
+          <div class="column">
+            <h2>¿Cómo puede<br> ayudarte Estimat?</h2><!-- TITULO H1 -->
+          </div>
+        </div>
+        <!--fila-->
+        <div class="container-row">
   
-  <section>
+          <!-- PRIMER CARD -->
+          <div class="card">
+            <img class="img-card" src="./img/Recurso-22.png" alt="recurso-1">
+            <div>
+              <h5>TOMA DE<br> DECISIONES<br>EFICIENTES</h5>
+        
+            </div>
+          </div>
+          <!-- SEGUNDA CARD -->
+          <div class="card">
+            <img class="img-card" src="./img/Recurso-20.png" alt="recurso-2">
+            <div>
+              <h5>ALCANZA<br>OBJETIVOS<br> PRECISOS</h5>
+            </div>
+          </div>
+          <!-- TERCERA CARD -->
+          <div class="card">
+            <img class="img-card" src="./img/Recurso-19.png" alt="recurso-3">
+            <div>
+              <h5>CONSTRUYA<br>TU MOTOR DE<br> MOTIVACIÓN</h5>
+        
+            </div>
+          </div>
+          <!-- cuarta CARD -->
+          <div class="card">
+            <img class="img-card" src="./img/Recurso-18.png" alt="recurso-4">
+            <div>
+              <h5>REGISTRA<br> Y ACOMPAÑA<br>TU PROGRESO</h5>
+            </div>
+          </div>
+          <!-- quinta CARD -->
+          <div class="card">
+            <img class="img-card" src="./img/Recurso-17.png" alt="recurso-5">
+            <div>
+              <h5>CREA<br>HÁBITOS<br>SÓLIDOS</h5>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CAJA PADRE -->
+      <!--<section class="container-image" >
+        <div class="container-text">
+          <p style="font-size: 25px;">UN MODELO ORGANIZACIONAL PERSONALIZADO<BR>
+             BASADO EN LA ENTROPÍA DE LA INFORMACIÓN,<br> DISEÑADO PARA GUIARTE EN TUS <br>
+            PRIORIDADES Y DECISIONES</p>
+          <button>LEE EL PROYECTO COMPLETO</button>
+        </div>
+      </section>-->
+      <!-- CAJA PADRE -->
+      <section>
+        <div class="container-row">
+          <div class="column">
+            <h2>Vamos a construir con base<br>
+              en sus objetivos y motivaciones<br>
+              conceptos como:
+            </h2><!-- TITULO H1 -->
+          </div>
+        </div>
+        <div class="container-row">
+          <table><!--TABLA-->
+            <tr><!-- <tr> DEFINE UNA FILA DE CELDAS-->
+              <td>MÉTODO <br>CIENTÍFICO EN LA VIDA<!-- <td> DEFINE UNA CELDA-->
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    La ciencia es la progresiva aproximación del hombre al mundo real (Max Planck)
+                  </li>
+                  <br>
+                  <li>
+                    La gran idea que desentraña los misterios del universo aplicada a la individualidad
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>COGNICIÓN<br>
+                EVOLUTIVA
+              </td>
+        
+              <td>
+                <ul>
+                  <li>
+                    "La incertidumbre es la regla, no la excepción." (Karl Popper)
+                  </li>
+                  <br>
+                  <li>
+                    ¿Cómo utilizar la incertidumbre a nuestro favor?
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>PENSAMIENTO <br>
+                CRÍTICO <br>
+                PROBABILÍSTICO
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    La selección natural ha moldeado nuestras mentes para que estemos adaptados a
+                    sobrevivir y reproducirse en entornos específicos. (David M. Buss)
+                  </li>
+                  <br>
+                  <li>
+                    La gran idea que desentraña los misterios del universo aplicada a la individualidad
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <!--CAJA PADRE-->
+      <section class="grid-container"><!-- TIENE DOS COLUMNAS -->
+        <!--COLUMNA UNO-->
+        <div >
+          <img class="img-grid"  src="./img/equipo-de-trabajo_-estimat.png" alt="">
+        </div>
+        <!--COLUMNA DOS-->
+        <div class="text-grid">
+          <h1>Te invitamos a<br>
+            ser Co-creador<br>
+            de Estimat</h1>
+          <br>
+          <p>Entendemos la importancia del aprendizaje lógico
+            aplicado a la vida, participa de nuestro proyecto,
+            y nuestras investigaciones para transformar la
+            manera que abordamos el bienestar metal y
+            calidad de vida en la actualidad.
+          </p>
+          <button id="button"><span id="span">QUIERO PARTICIPAR</span></button>
+        </div>
+      </section>
+    </main>
     
-    <div class="grid-container">
-      <!----COLUMNA UNO----->
-      <div >
-        <img class="img-grid"  src="./img/equipo-de-trabajo_-estimat.png" alt="">
-      </div>
-      <!----COLUMNA DOS------>
-      <div class="text-grid">
-        <h1>Te invitamos a<br>
-          ser Co-creador<br>
-          de Estimat</h1>
-        <br>
-        <p>Entendemos la importancia del aprendizaje lógico
-          aplicado a la vida, participa de nuestro proyecto,
-          y nuestras investigaciones para transformar la
-          manera que abordamos el bienestar metal y
-          calidad de vida en la actualidad.
-        </p>
-        <button id="button"><span>QUIERO PARTICIPAR</span></button>
-      </div>
-    </div>
-  
-  </section>
-  
-
-    <script src="script.js"></script>
     <footer>
         <div>
           <ul>
@@ -205,7 +209,7 @@
               <ul>
                 <li>
                   <!--<svg></svg>-->
-                  <img class="logo-footer" src="./img/logo  ESTIMAT-04.png" alt="">
+                  <img class="logo-footer" src="./img/logo-ESTIMAT-04.png" alt="logo-footer">
                 </li>
               </ul>
             </li>
@@ -215,13 +219,13 @@
         <div class="social-list">
           <ul>
             <li>
-              <a href=""><img src="" alt=""></a><!----enlace e src de icono de instagram-->
+              <a href=""><img src="" alt=""></a><!--enlace e src de icono de instagram-->
             </li>
             <li>
-              <a href=""><img src="" alt=""></a><!---youtube----->
+              <a href=""><img src="" alt=""></a><!--youtube-->
             </li>
             <li>
-              <a href=""><img src="" alt=""></a><!---faceboook----->
+              <a href=""><img src="" alt=""></a><!--faceboook-->
             </li>
             <li>
               <a href="">SistemaEstimat</a>
@@ -232,6 +236,6 @@
         <!--<div class="footer-separator"></div>-->
         <p> Copyright &copy; 2024. Todos los derechos reservados.</p>
     </footer>
-    
+    <script src="./js/script.js"></script>
 </body>
 </html>
