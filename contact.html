@@ -8,25 +8,98 @@
 </head>
 <body>
     <header>
-        <nav class="navigation">
-          <a href="index.html" id="logo">
-            <img src="./img/logo  ESTIMAT-03.png" alt="">
-          </a>
-          <div class="nav-button">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <ul class="nav-links">
-            <a href="">¿CÓMO FUNCIONA?</a>
-            <a href="index.html">INICIO</a>
-            <a href="#">NOSOTROS</a>
-            <a href="contact.html">CONTACTO</a>
-          </ul>
-        
-        </nav>
+      <nav class="navigation"><!--NAV-BAR-->
+        <a href="index.html" id="logo">
+          <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
+        </a>
+        <!--BOTON HAMBURGUESA el valor checkbox permite activar y desactivar una opcion -->
+        <input type="checkbox" id="menu-check"><!--input crea un campo de entrada/CHEQUEAR/-->
+        <label class="nav-button" for="menu-check"><!--label crea una etiqueta para identificar un elemento de formulario, el BOTON HAMBURGUESA-->
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <!-- MENU -->
+        <ul class="nav-links">
+          <li><a href="">¿Cómo funciona?</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      
+      </nav>
 
     </header>
+    <main>
+      <section id="contacts" class="section white-bg">
+        <div class="content">
+          <div class="container">
+            <div>
+              <h2>Contacto</h2>
+            </div>
+            <div>
+              <p>¿Tenes algo para decir ? Dejanos tu mensaje o consulta.</p>
+            </div>
     
+            <div class="contactForm clear">
+              <fieldset id="contact_form">
+                <div class="grid-half">
+                  <label for="name">Nombre</label>
+                  <input type="text" id="name" name="name">
+                </div>
+                <div class="grid-half">
+                  <label for="email">Email</label>
+                  <input type="text" id="email" name="email" class="right">
+                </div>
+                <label for="message" class="m-top">Mensaje</label>
+                <textarea id="message"
+                  name="message"></textarea><!---campo de entrada para insertar multiples lineas de texto-->
+                <div class="clear"></div>
+                <label>
+                  <button class="submit_btn" id="submit_btn">
+                    ENVIAR
+                  </button>
+                </label>
+              </fieldset>
+            </div>
+            <hr class="rast">
+          </div>
+        </div>
+      </section>
+    
+    </main>
+    <footer>
+      <div>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <!--<svg></svg>-->
+                <img class="logo-footer" src="./img/logo-ESTIMAT-04.png" alt="logo-footer">
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <br><br>
+      <div class="social-list">
+        <ul>
+          <li>
+            <a href=""><img src="" alt=""></a><!--enlace e src de icono de instagram-->
+          </li>
+          <li>
+            <a href=""><img src="" alt=""></a><!--youtube-->
+          </li>
+          <li>
+            <a href=""><img src="" alt=""></a><!--faceboook-->
+          </li>
+          <li>
+            <a href="">SistemaEstimat</a>
+          </li>
+        </ul>
+    
+      </div>
+      <!--<div class="footer-separator"></div>-->
+      <p> Copyright &copy; 2024. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
