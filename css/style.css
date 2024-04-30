@@ -390,7 +390,7 @@ footer p{
 }
 
 /* Media query para tabletas */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 900px) and (max-width: 1199px) {
   h1, h2 {
     font-size: 44px; /* Tamaño de fuente para h1 en tabletas */
   }
