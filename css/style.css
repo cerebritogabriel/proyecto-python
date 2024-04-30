@@ -504,7 +504,7 @@ footer p{
     order: 2;
   }
 }
-eyframes animaboton {
+@keyframes animaboton {
         0%   {top: 0px; background: violet; width: 100px;}
         100% {top: 200px; background: lightblue; width: 300px;}
       }
