@@ -377,22 +377,15 @@ footer p{
     color: #ffffff;
     font-size: 12px;
 } 
-/* QUERIES DE BOX */
-/* Media query para pantallas grandes */
-/* Media query para tabletas */
-@media screen and (min-width: 900px) and (max-width: 1199px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Una sola columna */
-    grid-template-rows: auto auto; /* Dos filas */
+/* QUERIES INICIAL */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  .img-grid {
-    margin: 0 auto; /* Centrar la imagen horizontalmente */
-  }
-
-  .text-grid {
-    margin: 0;
-    text-align: center; /* Centrar el texto horizontalmente */
+  .contenido-inicial {
+    order: 2; /* Coloca el contenido inicial después de la imagen de fondo */
   }
 }
 /* QUERIES DE TEXTO */
