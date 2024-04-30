@@ -377,17 +377,7 @@ footer p{
     color: #ffffff;
     font-size: 12px;
 } 
-/* QUERIES INICIAL */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .header-container {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .contenido-inicial {
-    order: 2; /* Coloca el contenido inicial después de la imagen de fondo */
-  }
-}
 /* QUERIES DE TEXTO */
 /* Media query para pantallas grandes */
 @media screen and (min-width: 1200px) {
