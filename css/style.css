@@ -128,7 +128,7 @@ td {
 /*flex-box
 /**** CAJA PADRE ***/
 .container-flex{
-    border:1px solid #f075db;
+    border:0px solid #f075db;
     display:flex;
     width: 420px;/*ancho*/
     flex-direction: column;/**/
@@ -141,13 +141,13 @@ td {
     margin: 5px; 
    }
 .box1{
-    border: 1px solid green;
+    border: 0px solid green;
     text-align: left;
     flex: 1;/**/
     padding: 20px;
 }
 .box2{
-    border: 1px solid green;
+    border: 0px solid green;
     text-align: left;
     flex: 1;/**/
     padding: 20px;
@@ -578,5 +578,8 @@ footer p{
     order: 2;
   }
 }
-
+#link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Mantiene el color del texto heredado */
+  }
 
