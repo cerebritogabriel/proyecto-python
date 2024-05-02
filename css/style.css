@@ -33,7 +33,7 @@ h5{
     justify-content: center;
 }
 /*****IMAGEN DE FONDO******/
-/*.container-image {
+.container-image {
     background-image: url("/img/tyler-nix.jpg");
     background-color: #cccccc;
     height: 700px;
@@ -78,6 +78,11 @@ td {
     position: relative;
     height: 700px;
     
+}
+.container-nav{
+    display: flex;
+    padding: 10px;
+    width: 100%;
 }
 /*****NAVEGADOR******/
 .navigation{
@@ -131,7 +136,7 @@ td {
     text-align: center;
     
 }
-.container-flex > div { 
+.container-flex > div { /* > se aplica a TODOS los elementos DIV QUE ESTAN contenidos DENTRO de CONTAINER-FLEX*/
     height: 140px; /*altura*/
     margin: 5px; 
    }
@@ -198,11 +203,11 @@ td {
 
 }*/
 /**************/
-/*Grid*/
+/*Grid*//*PASAR A FLEX-BOX*/
 /*****CONTENEDOR PADRE*******/        
 .grid-container {
     display: grid;/*crea un contenedor de cuadricula*/
-    grid-template-columns: auto auto; /*define el número y el tamaño de columnas*/
+    grid-template-columns: auto auto; /*define DOS COLUMNAS, y el tamaño de columnas*/
     gap: 10px;
     background-color: #f1f1f1;
     padding: 10px;
@@ -226,10 +231,10 @@ td {
 .grid-container > div {/* > se aplica a TODOS los elementos DIV QUE ESTAN contenidos DENTRO de GRID-CONTAINER*/
     justify-content: center;
     padding: 100px 0px;
-    border: 1px solid ;
+   /*border: 1px solid ;/*BORDE DE GRID*/
     
 }
-/************/
+/********************************/
 
 .nav-links a:hover {
     background-color: black;
@@ -242,7 +247,10 @@ td {
  padding-right: 5px;
  
 }*/
-
+@keyframes animaboton {
+    0%   {top: 0px; background: violet; width: 100px;}
+    100% {top: 200px; background: lightblue; width: 300px;}
+}
 #button{
     border-radius: 40px;
     padding: 0 25px;
@@ -250,9 +258,8 @@ td {
     align-items: center;
     display:inline-flex;
     height: 75px;
-    background: linear-gradient(rgb(241, 241, 241) , rgb(241, 241, 241)) padding-box padding-box, 
-    linear-gradient(-225deg, rgb(240, 207, 117), rgb(117, 178, 240), #f075db) border-box border-box;
     border: 3px solid transparent;
+    animation: animaboton 5s infinite;
 }
 /*****TAMAÑO LOGO******/
 #logo img{
@@ -264,31 +271,43 @@ td {
 
 }
 /*contacto*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    padding: 0 10px;
+}
+#contacts{
+    z-index: 2;
+}
 #contacts .content{
     padding: 90px 0;
     z-index: 2;
 }
 
-/*formularios*/
-@media only screen and (max-width:740px){
-    #contact_form label{
-        margin-top: 70px;
-    }
-}
-#contact_form{
-    max-width: 600px;
+#contact_form{ /**FIELSET**/
+    max-width: 500px;
     font-size: 11px;
     color: #666666;
     margin: 0 auto;
 }
 #contact_form label{
     display: block;
-    text-align: center;
+    text-align: center;/*se aplica a elementos de bloque y celdas de tabla*/
     margin-top: 50px;
     margin-bottom: 20px;
     font-size: 1em;
     text-transform: uppercase;
     color: #666;
+}
+/****margin top*****/
+.m-top{
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+
 }
 
 #contact_form input{
@@ -301,44 +320,99 @@ td {
     color: #666;
     -webkit-font-smoothing: antialiase;
     font-size: 1em;
+    
 }
+input::placeholder {
+    color: #666;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #contact_form textarea{
     background: none repeat scroll 0 0 rgba(2522, 255, 255, 0.2);
     border: 1px solid #666;
     color: #666;
     height:200px;
-    width: 100%;
+    width: 100%;/*ocupa el 100% del contenedor FIELSET*/
     resize: none;
     outline: none;
     margin-top:8px;
     padding: 10px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
-/****margin top*****/
-.m-top{
-    float: left;
-    margin-top: 15px;
-    text-align: center;
-    width: 100%;
+.grid-half{
+    
+    position: relative;
+    margin-bottom: 40px;
+    
+}
 
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0,35em;
+    padding-inline-start: 0,75em;
+    padding-inline-end: 0.75;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: rgb (192, 192, 192);
+    border-image: initial;
+
+}
+#contact_form label{
+	margin-top: 70px;
 }
 #contact_form label .m-top{
     margin-top: 22px;
 }
-/*boton enviar*/
+.content{
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 4;
+}
+
+fieldset,label {
+    border: none;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+/*BOTON ENVIAR*/
 .submit_btn {
     border: none;
     padding: 5px 15px 5px 15px;
-    width: 100%;
+    width: 100%; /*ocupa el 100% del contenedor FIELSET*/
     height: 70px;
     margin: 0 auto;
     cursor: pointer;
     letter-spacing: 3px;
     position: relative;
+    
 }
-.clear{
-    float: none;
-    clear: both;
+#submit_btn:hover{
+    background-color:#000;
+    color: white;
 }
+/*formularios*/
+@media only screen and (max-width:740px){
+    #contact_form label{
+        margin-top: 70px;
+    }
+}
+
 /*****FOOTER****/
 footer{
     position: relative;
@@ -504,21 +578,5 @@ footer p{
     order: 2;
   }
 }
-@keyframes animaboton {
-        0%   {top: 0px; background: violet; width: 100px;}
-        100% {top: 200px; background: lightblue; width: 300px;}
-      }
----------------------------------------------------------------------------------------------------------
-#button{
-    border-radius: 40px;
-    padding: 0 25px;
-    margin: 40px 35px;
-    align-items: center;
-    display:inline-flex;
-    height: 75px;
-    background: linear-gradient(rgb(241, 241, 241) , rgb(241, 241, 241)) padding-box padding-box, 
-    linear-gradient(-225deg, rgb(240, 207, 117), rgb(117, 178, 240), #f075db) border-box border-box;
-    border: 3px solid transparent;
-    animation:animaboton 5s infinite;
-}
+
 
