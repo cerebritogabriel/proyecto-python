@@ -5,64 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estimat</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/estimatico.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="container-nav">
-    <nav class="navigation"><!--NAV-BAR-->
-      <a href="index.html" id="logo">
-        <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
-      </a>
-       <!--BOTON HAMBURGUESA el valor checkbox permite activar y desactivar una opcion -->
-       <input type="checkbox" id="menu-check"><!--input crea un campo de entrada/CHEQUEAR/-->
-       <label class="nav-button" for="menu-check"><!--label crea una etiqueta para identificar un elemento de formulario, el BOTON HAMBURGUESA-->
-         <span></span>
-         <span></span>
-         <span></span>
-       </label>
-       <!-- MENU -->
-       <ul class="nav-links">
-         <li><a href="index.html">Inicio</a></li>
-         <li><a href="#">Nosotros</a></li>
-         <li><a href="contact.html">Contacto</a></li>
-       </ul>
-  
-    </nav>
-  
-  </header>
     <main>
-      <section id="contacts" class="section white-bg">
-        <div class="content">
-          <div class="container">
-      
-            <div>
-              <p style="text-align: center;">¿Tenes algo para decir ? Dejanos tu mensaje o consulta.</p>
-            </div>
-      
-            <fieldset id="contact_form">
-              <div class="grid-half">
-                <label for="name"></label>
-                <input type="text" id="name" name="name" placeholder="Nombre">
-              </div>
-              <div class="grid-half">
-                <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="Ingrese su email">
-              </div>
-              <label for="message" class="m-top"></label>
-              <textarea id="message" name="message">Sobre qué quieres hablar?</textarea><!---campo de entrada para insertar multiples lineas de texto-->
-              <label>
-                <button class="submit_btn" id="submit_btn">
-                  ENVIAR
-                </button>
-              </label>
-            </fieldset>
+      <section id="form-contact">
+        
+        <div class="container">
+          <div>
+            <a href= index.html id="logo">
+              <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
+            </a>
+            <p class="text-form">Sobre que quieres hablar?</p>
           </div>
+          <fieldset id="form-content">
+            <div class="grid-inputs">
+              <input type="text" id="name" name="name" placeholder="Nombre">
+              <input type="text" id="" name="lastname" placeholder="Apellido">
+            </div>
+            <label for="email" class="m-top"></label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su email">
+            
+            <label for="message" class="m-top"></label>
+            <textarea id="message" name="message">Sobre qué quieres hablar?</textarea><!---campo de entrada para insertar multiples lineas de texto-->
+            <label>
+              <button class="submit_btn" id="submit_btn">
+                ENVIAR
+              </button>
+            </label>
+          </fieldset>
           
         </div>
-      
-        </div>
-      </section>
+        
+      </div>
 
-      
+      </section>
     </main>
     <footer>
       <div>
@@ -88,9 +65,6 @@
           </li>
           <li>
             <a href=""><img src="" alt=""></a><!--faceboook-->
-          </li>
-          <li>
-            <a href="">SistemaEstimat</a>
           </li>
         </ul>
     

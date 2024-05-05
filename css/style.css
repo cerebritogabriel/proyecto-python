@@ -34,7 +34,7 @@ h5{
 }
 /*****IMAGEN DE FONDO******/
 .container-image {
-    background-image: url("/img/tyler-nix.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/tyler-nix.jpg");
     background-color: #cccccc;
     height: 700px;
     background-position: center;
@@ -50,6 +50,15 @@ h5{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+}
+#blanco{
+    border-radius: 30px;
+    padding: 18px;
+    margin: 20px;
+    font-weight: 900;
+    border:none;
+    background-color: white;
+    font-size: 14px;
 }
 
 /****TABLA******/
@@ -71,7 +80,7 @@ td {
 /****CONTAINER HEADER******/
 .header-container{
     background-image: url("/img/chica---lateral---inicio.png");/*<---IMAGEN ****/
-    background-color: #f1f1f1 ;
+    background-color: rgb(242, 242, 242) ;
     background-position: right;
     background-repeat: no-repeat;
     background-size: 590px 700px;
@@ -79,11 +88,7 @@ td {
     height: 700px;
     
 }
-.container-nav{
-    display: flex;
-    padding: 10px;
-    width: 100%;
-}
+
 /*****NAVEGADOR******/
 .navigation{
     z-index: 10;
@@ -109,13 +114,13 @@ td {
 .nav-links a{
     position: relative;
     text-align: center;
-    padding: 14px 16px;
+    padding: 8px 10px;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 7px;
     color: black;
     font-size: 10px;
-    font-weight: 500;
-    border-radius: 18px;
+    font-weight: bold;
+    border-radius: 20px;
     text-transform: uppercase;
     letter-spacing: .115em;
 }
@@ -128,29 +133,30 @@ td {
 /*flex-box
 /**** CAJA PADRE ***/
 .container-flex{
-    border:0px solid #f075db;
     display:flex;
-    width: 420px;/*ancho*/
+    width: 400px;/*ancho*/
     flex-direction: column;/**/
     justify-content: center;
     text-align: center;
+    margin-left: 35px;
+    
     
 }
-.container-flex > div { /* > se aplica a TODOS los elementos DIV QUE ESTAN contenidos DENTRO de CONTAINER-FLEX*/
+.container-flex > div { 
     height: 140px; /*altura*/
-    margin: 5px; 
+    margin: 18px;
    }
 .box1{
-    border: 0px solid green;
+    
     text-align: left;
     flex: 1;/**/
-    padding: 20px;
+    
 }
 .box2{
-    border: 0px solid green;
+    
     text-align: left;
     flex: 1;/**/
-    padding: 20px;
+    
 }
 /****************/
 /*Flex-box*/
@@ -192,6 +198,7 @@ td {
     width: auto;
 }
 
+
 /*****CONTENEDOR PADRE DE TABLA****/
 /*.container-tabla {
     border: 2px solid greenyellow;
@@ -203,11 +210,11 @@ td {
 
 }*/
 /**************/
-/*Grid*//*PASAR A FLEX-BOX*/
+/*Grid*/
 /*****CONTENEDOR PADRE*******/        
 .grid-container {
     display: grid;/*crea un contenedor de cuadricula*/
-    grid-template-columns: auto auto; /*define DOS COLUMNAS, y el tamaño de columnas*/
+    grid-template-columns: auto auto; /*define el número y el tamaño de columnas*/
     gap: 10px;
     background-color: #f1f1f1;
     padding: 10px;
@@ -231,11 +238,10 @@ td {
 .grid-container > div {/* > se aplica a TODOS los elementos DIV QUE ESTAN contenidos DENTRO de GRID-CONTAINER*/
     justify-content: center;
     padding: 100px 0px;
-   /*border: 1px solid ;/*BORDE DE GRID*/
+    border: 1px solid ;
     
 }
-/********************************/
-
+/************/
 .nav-links a:hover {
     background-color: black;
     color: white;
@@ -247,6 +253,7 @@ td {
  padding-right: 5px;
  
 }*/
+/*****BOTON ANIMADO***/
 @keyframes animaboton {
     0%   {top: 0px; background: violet; width: 100px;}
     100% {top: 200px; background: lightblue; width: 300px;}
@@ -266,37 +273,40 @@ td {
     height: 50px;
     width: auto;
     display: block;
-    margin-left: 15px;
-
-
+    
 }
-/*contacto*/
+/***CONTACTO***/
+#form-contact{
+    text-align: center;
+    justify-content: center;
+}
+.text-form{
+    margin: 3em 0 0 0;
+}
+
 .container{
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 5;
-    padding: 0 10px;
+    padding: 25px 30px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
 }
-#contacts{
+/*#contacts{
     z-index: 2;
-}
-#contacts .content{
-    padding: 90px 0;
-    z-index: 2;
-}
+}*/
 
-#contact_form{ /**FIELSET**/
+/**FIELSET**//*Este elemento agrupa otros elementos de formulario. Se usa para crear secciones dentro de formularios extensos*/
+#form-content{ 
     max-width: 500px;
     font-size: 11px;
     color: #666666;
     margin: 0 auto;
+    height: 500px;
+    margin-top: 40px;
 }
-#contact_form label{
+/**LABEL**/
+#form-content label{
     display: block;
     text-align: center;/*se aplica a elementos de bloque y celdas de tabla*/
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 30px;
     font-size: 1em;
     text-transform: uppercase;
     color: #666;
@@ -307,20 +317,21 @@ td {
     margin-top: 15px;
     text-align: center;
     width: 100%;
-
 }
 
-#contact_form input{
-    border:1px solid #666;
+#form-content input{
+    /*border:1px solid #ccc;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+    /*border:1px solid #666;*/
+    border: none;
     outline: none;
     padding: 0 20px;
     float: left;
     width: 100%;
     height: 35px;
     color: #666;
-    -webkit-font-smoothing: antialiase;
     font-size: 1em;
-    
 }
 input::placeholder {
     color: #666;
@@ -328,57 +339,32 @@ input::placeholder {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#contact_form textarea{
-    background: none repeat scroll 0 0 rgba(2522, 255, 255, 0.2);
-    border: 1px solid #666;
+#form-content textarea{
+    /*border:1px solid #ccc;
+    border-radius: 5px;
+    border-bottom-width: 2px;*/
+    /*background: none repeat scroll 0 0 rgba(2522, 255, 255, 0.2);*/
+    /*border: 1px solid #666;*/
+    border: none;
     color: #666;
     height:200px;
     width: 100%;/*ocupa el 100% del contenedor FIELSET*/
     resize: none;
     outline: none;
-    margin-top:8px;
     padding: 10px;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
     
 }
-.grid-half{
+.grid-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
     
-    position: relative;
-    margin-bottom: 40px;
-    
 }
 
-
-fieldset {
-    display: block;
-    margin-inline-start: 2px;
-    margin-inline-end: 2px;
-    padding-block-start: 0,35em;
-    padding-inline-start: 0,75em;
-    padding-inline-end: 0.75;
-    padding-block-end: 0.625em;
-    min-inline-size: min-content;
-    border-width: 2px;
-    border-style: groove;
-    border-color: rgb (192, 192, 192);
-    border-image: initial;
-
-}
-#contact_form label{
-	margin-top: 70px;
-}
-#contact_form label .m-top{
-    margin-top: 22px;
-}
-.content{
-    width: 100%;
-    float: left;
-    position: relative;
-    z-index: 4;
-}
-
-fieldset,label {
+div,fieldset,label {
     border: none;
     outline: 0;
     font-weight: inherit;
@@ -389,8 +375,9 @@ fieldset,label {
     text-decoration: none;
     margin: 0;
     padding: 0;
+    
 }
-/*BOTON ENVIAR*/
+/****BOTON ENVIAR****/
 .submit_btn {
     border: none;
     padding: 5px 15px 5px 15px;
@@ -400,17 +387,12 @@ fieldset,label {
     cursor: pointer;
     letter-spacing: 3px;
     position: relative;
+    background-color: #fff;
+    font-weight: bold;
     
 }
 #submit_btn:hover{
-    background-color:#000;
-    color: white;
-}
-/*formularios*/
-@media only screen and (max-width:740px){
-    #contact_form label{
-        margin-top: 70px;
-    }
+    color: #000;
 }
 
 /*****FOOTER****/
@@ -451,39 +433,14 @@ footer p{
     color: #ffffff;
     font-size: 12px;
 } 
-
-/* QUERIES DE TEXTO */
-/* Media query para pantallas grandes */
-@media screen and (min-width: 1200px) {
-  h1, h2 {
-    font-size: 48px; /* Tamaño de fuente para h1 en pantallas grandes */
-  }
-  
-  body {
-    font-size: 18px; /* Tamaño de fuente para h2-h6 en pantallas grandes */
-  }
-}
-
-/* Media query para tabletas */
-@media screen and (min-width: 900px) and (max-width: 1199px) {
-  h1, h2 {
-    font-size: 44px; /* Tamaño de fuente para h1 en tabletas */
-  }
-  
-  body {
-    font-size: 16px; /* Tamaño de fuente para h2-h6 en tabletas */
-  }
-}
-
-/* Media query para pantallas más pequeñas (celulares) */
-@media screen and (max-width: 767px) {
-  h1, h2 {
-    font-size: 40px; /* Tamaño de fuente para h1 en pantallas pequeñas */
-  }
-  
-  body {
-    font-size: 14px; /* Tamaño de fuente para h2-h6 en pantallas pequeñas */
-  }
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    h1, h2 {
+        font-size: 40px; /* Tamaño de fuente para h1 en pantalla pequeña */
+    }
+    body {
+        font-size: 14px; /* Tamaño de fuente para h2-h6 en pantalla pequeña */
+    }
 }
 
 /*****MENU RESPONSIVO******/
@@ -558,28 +515,3 @@ footer p{
     }
     
   }
-@media (max-width: 900px) {
-  .container-flex {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .box1, .box2 {
-    width: 100%;
-  }
-
-  .box1 {
-    order: 1;
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
-  }
-
-  .box2 {
-    order: 2;
-  }
-}
-#link {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: inherit; /* Mantiene el color del texto heredado */
-  }
-
