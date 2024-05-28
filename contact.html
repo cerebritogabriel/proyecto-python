@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estimat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="img/estimatico.ico" type="image/x-icon">
 </head>
@@ -16,29 +17,30 @@
             <a href= index.html id="logo">
               <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
             </a>
-            <p class="text-form">Sobre que quieres hablar?</p>
+            <p class="text-form">¿Te gustaria compartir tu email para conocer más y cognitición con nosotros?</p>
           </div>
-          <fieldset id="form-content">
-            <div class="grid-inputs">
-              <input type="text" id="name" name="name" placeholder="Nombre">
-              <input type="text" id="" name="lastname" placeholder="Apellido">
-            </div>
-            <label for="email" class="m-top"></label>
-            <input type="email" id="email" name="email" placeholder="Ingrese su email">
-            
-            <label for="message" class="m-top"></label>
-            <textarea id="message" name="message">Sobre qué quieres hablar?</textarea><!---campo de entrada para insertar multiples lineas de texto-->
-            <label>
-              <button class="submit_btn" id="submit_btn">
+          <form id="myForm">
+            <fieldset id="form-content">
+              <div class="grid-inputs">
+                <input type="text" id="name" name="name" placeholder="Nombre" value="">
+                <input type="text" id="lastname" name="lastname" placeholder="Apellido" value="">
+              </div>
+              <label for="email" class="m-top"></label>
+              <input type="email" id="email" name="email" placeholder="Ingrese su email">
+              <label for="message" class="m-top"></label>
+              <textarea id="message" name="message" placeholder="Sobre qué quieres hablar?"></textarea><!--campo de entrada para insertar multiples lineas de texto-->
+              <label>
+              <button class="submit_btn" id="submit_btn" value="ENVIAR" onclick="validar()">
                 ENVIAR
-              </button>
-            </label>
-          </fieldset>
-          
-        </div>
-        
-      </div>
 
+              </button>
+              
+            </fieldset>
+            
+            
+            
+          </form>
+          <!--devuelve un mensaje de validación-->
       </section>
     </main>
     <footer>
@@ -56,22 +58,58 @@
       </div>
       <br><br>
       <div class="social-list">
-        <ul>
-          <li>
-            <a href=""><img src="" alt=""></a><!--enlace e src de icono de instagram-->
-          </li>
-          <li>
-            <a href=""><img src="" alt=""></a><!--youtube-->
-          </li>
-          <li>
-            <a href=""><img src="" alt=""></a><!--faceboook-->
-          </li>
-        </ul>
-    
+        <a href="https://www.instagram.com/sistemaestimat/" class="fa fa-instagram"></a><!--enlace e src de icono de instagram-->
+        <a href="" class="fa fa-youtube-play"></a><!--youtube-->
+        <a href="" class="fa fa-facebook"></a><!--faceboook-->
+          
+        
       </div>
       <!--<div class="footer-separator"></div>-->
-      <p> Copyright &copy; 2024. Todos los derechos reservados.</p>
-    </footer>
-    <script src="./js/script.js"></script>
+      <p> Copyright &copy; 2024 SistemaEstimat. Todos los derechos reservados.</p>
+  </footer>
+    <script>
+      let nombre = document.getElementById("name");
+      let apellido = document.getElementById("lastname");
+      let correo = document.getElementById("email");
+      let mensaje = document.getElementById("message");
+
+      function validar() {
+        var textoError, campo;
+        textoError = "";
+
+        campo = document.getElementById("name");
+
+
+        if (campo.value.length == 0) {
+          textoError = "nombre vacio, ";
+        }
+
+        campo = document.getElementById("lastname");
+
+
+        if (campo.value.length == 0) {
+          textoError = "apellido vacio, ";
+        }
+
+        campo = document.getElementById("email");
+
+        if (campo.value.length == 0) {
+          textoError += "email vacio, ";
+        }
+
+        campo = document.getElementById("message");
+
+        if (campo.value.length == 0) {
+          textoError += "mensaje vacio ";
+        }
+
+        if (textoError.length != 0) {
+          alert(textoError);
+        }
+
+
+      }
+    </script>
+    
 </body>
 </html>

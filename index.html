@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <!--metadatos/información sobre tu página-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estimat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +15,12 @@
 </head>
 <body>
     <header class="header-container">
-      <nav class="navigation"><!--NAV-BAR-->
-        <a href="index.html" id="logo">
-          <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
-        </a>
+      <!-- LOGO -->
+      <a href="index.html" class ="logo">
+        <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
+      </a>
+      <nav class="navigation"><!--NAV-->
+        
         <!--BOTON HAMBURGUESA el valor checkbox permite activar y desactivar una opcion -->
         <input type="checkbox" id="menu-check"><!--input crea un campo de entrada/CHEQUEAR/-->
         <label class="nav-button" for="menu-check"><!--label crea una etiqueta para identificar un elemento de formulario, el BOTON HAMBURGUESA-->
@@ -33,13 +36,17 @@
         </ul>
       
       </nav>
-      
-        <div class="container-flex">
-          <div class="box1"><!-- COLUMNA -->
+    </header>
+    <!-- MAIN PÁGINA PRINCIPAL-->
+    
+      <main class="image1">
+        <!-- CAJA PADRE -->
+        <div class="container-flex"><!-- COLUMNA -->
+          <div class="box1">
             <h1>Trasciende
               la sobredosis de información
             </h1><!-- TITULO H1 -->
-            
+    
           </div>
           <div class="box2">
             <p>Podemos construir un programa con bases
@@ -51,30 +58,28 @@
             </p>
           </div>
         </div>
-        
+      </main>
     
-    </header>
-    <main>
-       <!-- CAJA PADRE -->
+      <!-- SECCIÓN UNO/CAJA PADRE -->
       <section>
         <div class="container-row">
           <div class="column">
-            <h2>¿Cómo puede<br> ayudarte Estimat?</h2><!-- TITULO H1 -->
+            <h2>¿Cómo puede ayudarte Estimat?</h2><!-- TITULO H1 -->
           </div>
         </div>
         <!--fila-->
         <div class="container-row">
-  
+    
           <!-- PRIMER CARD -->
           <div class="card">
             <img class="img-card" src="./img/Recurso-22.png" alt="recurso-1">
             <div>
               <h5>TOMA DE<br> DECISIONES<br>EFICIENTES</h5>
-        
+    
             </div>
           </div>
           <!-- SEGUNDA CARD -->
-          <div class="card">
+          <div class="card-gradient">
             <img class="img-card" src="./img/Recurso-20.png" alt="recurso-2">
             <div>
               <h5>ALCANZA<br>OBJETIVOS<br> PRECISOS</h5>
@@ -85,7 +90,7 @@
             <img class="img-card" src="./img/Recurso-19.png" alt="recurso-3">
             <div>
               <h5>CONSTRUYA<br>TU MOTOR DE<br> MOTIVACIÓN</h5>
-        
+    
             </div>
           </div>
           <!-- cuarta CARD -->
@@ -106,26 +111,28 @@
           </div>
         </div>
       </section>
-      <!-- CAJA PADRE -->
-      <section class="container-image" id="acercade">
+      <!-- SECCIÓN DOS/CAJA PADRE -->
+      <section class="container-image">
+        <h1 id="acercade"></h1>
         <div class="container-text">
-          <p style="font-size: 31px; font-weight: 500;">UN MODELO ORGANIZACIONAL PERSONALIZADO 
-             BASADO EN LA ENTROPÍA DE LA INFORMACIÓN, DISEÑADO <span style= "font-weight: 800;">PARA GUIARTE EN TUS
-            PRIORIDADES Y DECISIONES</span></p>
+          
+          <p style=" font-weight: 500;">UN MODELO ORGANIZACIONAL PERSONALIZADO
+            BASADO EN LA ENTROPÍA DE LA INFORMACIÓN, DISEÑADO <span style="font-weight: 800;">PARA GUIARTE EN TUS
+              PRIORIDADES Y DECISIONES</span></p>
           <button id="blanco">LEE EL PROYECTO COMPLETO</button>
         </div>
       </section>
-      <!-- CAJA PADRE -->
+      <!-- SECCIÓN TRES/ CAJA PADRE -->
       <section id="como-funciona">
         <div class="container-row">
           <div class="column">
-            <h2>Vamos a construir con base<br>
-              en sus objetivos y motivaciones<br>
+            <h2>Vamos a construir con base
+              en sus objetivos y motivaciones
               conceptos como:
-            </h2><!-- TITULO H1 -->
+            </h2>
           </div>
         </div>
-        <div class="container-row">
+        <div>
           <table><!--TABLA-->
             <tr><!-- <tr> DEFINE UNA FILA DE CELDAS-->
               <td>MÉTODO <br>CIENTÍFICO EN LA VIDA<!-- <td> DEFINE UNA CELDA-->
@@ -135,24 +142,24 @@
                   <li>
                     La ciencia es la progresiva aproximación del hombre al mundo real (Max Planck)
                   </li>
-                  <br>
                   <li>
                     La gran idea que desentraña los misterios del universo aplicada a la individualidad
                   </li>
                 </ul>
               </td>
+              
             </tr>
+            
             <tr>
               <td>COGNICIÓN<br>
                 EVOLUTIVA
               </td>
-        
+    
               <td>
                 <ul>
                   <li>
                     "La incertidumbre es la regla, no la excepción." (Karl Popper)
                   </li>
-                  <br>
                   <li>
                     ¿Cómo utilizar la incertidumbre a nuestro favor?
                   </li>
@@ -170,7 +177,6 @@
                     La selección natural ha moldeado nuestras mentes para que estemos adaptados a
                     sobrevivir y reproducirse en entornos específicos. (David M. Buss)
                   </li>
-                  <br>
                   <li>
                     La gran idea que desentraña los misterios del universo aplicada a la individualidad
                   </li>
@@ -180,19 +186,28 @@
           </table>
         </div>
       </section>
+      <section id="video">
+        <h2>En mundo saturado de información,<br>
+          <span style="font-weight: 800;">¿Qué pasa en nuestro cerebro?</span></h2>
+         <!--<div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1U0j65L7TwM?si=WAB3kTpYHdZYQnsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+             web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>-->
+
+      </section>
       <!--CAJA PADRE-->
-      <section class="grid-container"><!-- TIENE DOS COLUMNAS -->
+      <section class="contenedor"><!-- TIENE DOS COLUMNAS -->
         <!--COLUMNA UNO-->
-        <div >
-          <img class="img-grid"  src="./img/equipo-de-trabajo_-estimat.png" alt="">
+        <div class="div-1">
+          <img class="img-flex" src="./img/equipo-de-trabajo_-estimat.png" alt="">
         </div>
         <!--COLUMNA DOS-->
-        <div class="text-grid">
-          <h1>Te invitamos a<br>
-            ser Co-creador<br>
+        <div class="div-2">
+          <h1>Te invitamos a
+            ser <span style="font-weight:800">Co-creador</span>
             de Estimat</h1>
           <br>
-          <p>Entendemos la importancia del aprendizaje lógico
+          <p >Entendemos la importancia del aprendizaje lógico
             aplicado a la vida, participa de nuestro proyecto,
             y nuestras investigaciones para transformar la
             manera que abordamos el bienestar mental y
@@ -201,7 +216,7 @@
           <button id="button"><span id="span">QUIERO PARTICIPAR</span></button>
         </div>
       </section>
-    </main>
+    
     
     <footer>
         <div>
@@ -218,25 +233,23 @@
         </div>
         <br><br>
         <div class="social-list">
-          <ul>
-            <li>
-              <a href=""><img src="" alt=""></a><!--enlace e src de icono de instagram-->
-            </li>
-            <li>
-              <a href=""><img src="" alt=""></a><!--youtube-->
-            </li>
-            <li>
-              <a href=""><img src="" alt=""></a><!--faceboook-->
-            </li>
-            <li>
-              <a href="">SistemaEstimat</a>
-            </li>
-          </ul>
+          <a href="https://www.instagram.com/sistemaestimat/" class="fa fa-instagram"></a><!--enlace e src de icono de instagram-->
+          <a href="" class="fa fa-youtube-play"></a><!--youtube-->
+          <a href="" class="fa fa-facebook"></a><!--faceboook-->
+            
           
         </div>
         <!--<div class="footer-separator"></div>-->
-        <p> Copyright &copy; 2024. Todos los derechos reservados.</p>
+        <p> Copyright &copy; 2024 SistemaEstimat. Todos los derechos reservados.</p>
     </footer>
+    
+
+      
+      
+    
+    
+    
     <script src="./js/script.js"></script>
+    
 </body>
 </html>
