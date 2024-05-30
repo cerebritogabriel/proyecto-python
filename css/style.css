@@ -11,10 +11,28 @@ body{
 }
 /*main*/
 /******TIPOGRAFIA**********/
-h1, h2{
+h1{
     font-size: 50px; /* Tamaño de fuente para h1 en pantalla grande */
     font-weight: bold; /* Texto en negrita */
     margin-top: 30px;
+}
+h2{
+    font-size: 50px; /* Tamaño de fuente para h1 en pantalla grande */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 30px;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+.titulo{
+  
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /***TEXTO RECURSOS***/
 h5{
@@ -44,7 +62,7 @@ h5{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     color: white;
     line-height: 150%;
     font-size: 25px;
@@ -61,14 +79,16 @@ h5{
 }
 
 /****TABLA******/
-table{
-    
-    margin: 30px 50px 0px 50px;
-    align-items: center;
-    justify-content: center;
-   
-
+#tabla{
+    width: 100%;
+    min-height: 750px;
+    overflow: hidden;
+    padding: 30px;
 }
+table{
+    margin: 30px 0 0px 0;
+}
+
 table li{
    margin: 10px;
    line-height: 130%;
@@ -94,6 +114,20 @@ header{
     padding: 2em;/**/
     z-index: 10;
 }
+.header-container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;/**/
+    transition: 0.7s;
+    padding: 2em;/**/
+    z-index: 10;
+    background-color: #f1f1f1;
+    align-items: center;
+
+}
 header.abajo{
     background: #fff;
     padding: 15px 20px;/**/
@@ -101,12 +135,37 @@ header.abajo{
 /*****TAMAÑO LOGO******/
 header .logo{
     position: relative;
-    height: 50px;
+    height: 55px;
     width: auto;
     display: flex;
     transition: 1.5s;
 
 }
+.nav-social{
+    display: flex;
+    justify-content: space-around;
+    min-width: 200px;
+    
+    
+}
+.nav-social a{
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    text-align: center;
+    color: black;
+    border-radius: 50%;
+    outline: none;
+    padding: 0;
+    float: left;
+    background-color: white;
+    align-items: center;
+    
+}
+
 
 /*****NAVEGADOR******/
 .navigation{
@@ -152,10 +211,6 @@ header ul li a{
     background-repeat: no-repeat;
    
 }
-
-/* .image1{
-    height: 100vh;
-}*/
 
 header.abajo .logo,
 header.abajo ul li a{
@@ -208,7 +263,6 @@ header.abajo ul li a{
     text-align: center;
 }
 .container-row{
-    /*height: 100vh;*/
     width: 100%;
     display: flex;
     flex-wrap: wrap;/*Los elementos flexibles se ajustan en varias líneas según sea necesario.*/
@@ -263,20 +317,22 @@ header.abajo ul li a{
 }
 /**************/
 #video{
-    display:flex;
+    display:block;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 700px;
-
+    gap: 10px;
 }
 
 #video div{
-    width: 60%;
-    height: 450px;
-    margin-top: 30px;
+   display: flex;
+   padding: 20px;
+   justify-content: center;
+    
 }
 #video div iframe{
+    
     width: 100%;
     height: 100%;
 
@@ -294,7 +350,6 @@ header.abajo ul li a{
     gap: 10px;
     overflow: hidden;
    
-    
 }
 .contenedor > div{
     justify-content:center ;
@@ -346,6 +401,7 @@ header.abajo ul li a{
     text-align: center;
     justify-content: center;
 }
+
 .text-form{
     margin: 3em 0 0 0;
 }
@@ -423,7 +479,7 @@ input::placeholder {
     
 }
 .grid-inputs{
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;    /*****corregir!!!!!!****/
     gap: 0.5em;
     
@@ -501,11 +557,11 @@ footer p{
     font-size: 12px;
 }
 .social-list{
-    
     display: flex;
     justify-content: space-around;
     min-width: 200px;
 }
+
 .social-list a{
     text-decoration: none;
     font-size: 15px;
@@ -520,18 +576,20 @@ footer p{
     outline: none;
     padding: 0;
     float: left;
-    
-    
 }
 
-/*@media only screen and (min-width: 600px) { /* entonces >= 600px  */
-    /* For tablets: *//*
-    width: 100%;
-    
-}*/
+
 /* Media query para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
-    
+    .nav-social{
+        width: 15%;
+        justify-content: center;
+    }
+
+    .header-container .logo{
+        width: 100%;
+        display: block;
+    }
     h1, h2 {
         font-size: 40px; /* Tamaño de fuente para h1 en pantalla pequeña */
     }
@@ -546,8 +604,10 @@ footer p{
     .div-1, .div-2{
         width: 100%;
     }
+
     footer{
         bottom: 0;
+        width: 100%;
     }
     
 }

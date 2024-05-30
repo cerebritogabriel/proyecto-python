@@ -14,7 +14,7 @@
     
 </head>
 <body>
-    <header class="header-container">
+    <header>
       <!-- LOGO -->
       <a href="index.html" class ="logo">
         <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
@@ -123,14 +123,12 @@
         </div>
       </section>
       <!-- SECCIÓN TRES/ CAJA PADRE -->
-      <section id="como-funciona">
-        <div class="container-row">
-          <div class="column">
-            <h2>Vamos a construir con base
-              en sus objetivos y motivaciones
-              conceptos como:
-            </h2>
-          </div>
+      <section id="tabla">
+        <div class="titulo">
+          <h2>Vamos a construir con base
+            en sus objetivos y motivaciones
+            conceptos como:
+          </h2>
         </div>
         <div>
           <table><!--TABLA-->
@@ -187,13 +185,18 @@
         </div>
       </section>
       <section id="video">
-        <h2>En mundo saturado de información,<br>
-          <span style="font-weight: 800;">¿Qué pasa en nuestro cerebro?</span></h2>
-         <!--<div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1U0j65L7TwM?si=WAB3kTpYHdZYQnsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+        <div class="titulo">
+          <h2>En mundo saturado de información,<br>
+            <span style="font-weight: 800;">¿Qué pasa en nuestro cerebro?</span></h2>
+        </div>
+        <div id="app">
+          
+          <div v-for="elemento in datos" class="video">
+            <iframe width="560" height="315" :src="elemento.video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
              web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>-->
 
+          </div>
+        </div>
       </section>
       <!--CAJA PADRE-->
       <section class="contenedor"><!-- TIENE DOS COLUMNAS -->
@@ -232,23 +235,16 @@
           </ul>
         </div>
         <br><br>
-        <div class="social-list">
+        <nav class="social-list">
           <a href="https://www.instagram.com/sistemaestimat/" class="fa fa-instagram"></a><!--enlace e src de icono de instagram-->
-          <a href="" class="fa fa-youtube-play"></a><!--youtube-->
-          <a href="" class="fa fa-facebook"></a><!--faceboook-->
-            
-          
-        </div>
+          <a href="http://www.youtube.com/@sistemaestimat" class="fa fa-youtube-play"></a><!--youtube-->
+          <a href="https://www.facebook.com/sistemaestimat" class="fa fa-facebook"></a><!--faceboook-->
+        </nav>
         <!--<div class="footer-separator"></div>-->
         <p> Copyright &copy; 2024 SistemaEstimat. Todos los derechos reservados.</p>
     </footer>
-    
 
-      
-      
-    
-    
-    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
     
 </body>
