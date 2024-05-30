@@ -1,4 +1,33 @@
-console.log("Se carga el código");
+/*objeto VUE */
+const { createApp } = Vue
+createApp({/*metodos que quiero que se ejecute */
+  data() {
+    return {
+      url: "./js/video.json",/*datos del html*/
+      datos: [],
+      error: false,
+    }
+  },
+  methods: {
+    fetchData(url) {
+      fetch(url)/*funcion asincronica */
+        .then(response => response.json())
+        .then(
+          data => {
+            console.log(data)
+            this.datos = data
+          }
+        )
+        .catch(error => {
+          console.log("Error:" + error)
+          this.error = true
+        });
+    }
+  },
+  created() {  // created() se ejecuta cada vez que se crea el objeto VUE
+    this.fetchData(this.url)/*url de la api primera funcion que se ejecuta */
+  }
+}).mount('#app')
 
 /*nav-scrooll*/
 /*El objeto Window controla aspectos de la ventana, su contenido, y los datos asociados a la 
@@ -38,9 +67,4 @@ let correcto = true;
   }
 
 }*/
-
-
-
-
-
 
