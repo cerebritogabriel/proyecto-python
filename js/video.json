@@ -9,13 +9,13 @@
         "id": 2,
         "title": "En mundo saturado de información, ¿ Qué pasa en nuestro cerebro?",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "video": "https://youtu.be/1U0j65L7TwM?si=oBMAEKy5ge-qYKtx"
+        "video": "./img/video.mp4"
     },
     {
         "id": 3,
         "title": "En mundo saturado de información, ¿ Qué pasa en nuestro cerebro?",
         "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "video": "https://youtu.be/1U0j65L7TwM?si=oBMAEKy5ge-qYKtx"
+        "video": "./img/video.mp4"
       }
     
    
