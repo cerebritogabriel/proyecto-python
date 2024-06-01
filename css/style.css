@@ -311,7 +311,7 @@ header.abajo ul li a{
     /*background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box padding-box, 
     linear-gradient(-225deg, rgb(117, 240, 148), rgb(117, 178, 240)) border-box border-box;*/
     background: linear-gradient(rgb(255, 255, 255), #ffffff) padding-box padding-box,
-     linear-gradient(-225deg, #b275f0, rgb(240, 117, 138)) border-box border-box;
+     linear-gradient(-225deg, #b275f0, #f0758a) border-box border-box;
     border: 2px solid transparent;
     line-height: 100%;
 
@@ -329,7 +329,8 @@ header.abajo ul li a{
     align-items: center;
     height: 700px;
     gap: 10px;
-    background: linear-gradient( to bottom, #b275f0 0%, #ffc988 10%, #ffffff 90%); 
+    background-image: linear-gradient(to bottom, #f9cae5, #efcfec, #e6d4f0, #dfd8f1, #dadcf0, #dde0f0,
+     #e0e3f1, #e4e7f1, #ebedf4, #f2f3f8, #f9f9fb, #ffffff); 
 }
 
 #video div{
