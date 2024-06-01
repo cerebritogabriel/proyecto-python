@@ -51,7 +51,7 @@ h5{
 .container-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/tyler-nix.jpg");
     background-color: #cccccc;
-    height: 700px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -204,7 +204,7 @@ header ul li a{
 .image1{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 700px;
     background-image: url("/img/chica---lateral---inicio.png");
     background-color: #f1f1f1;
     background-size: 590px 700px;;
@@ -213,7 +213,6 @@ header ul li a{
    
 }
 section{
-    height: 100vh;
     justify-content: center;
     align-items: center;
 
@@ -330,7 +329,7 @@ header.abajo ul li a{
     align-items: center;
     height: 700px;
     gap: 10px;
-    background: linear-gradient( to bottom,#ffcfdf 0%, #ffc988 0%,#b0f3f1 0%,   #ffffff 70%); 
+    background: linear-gradient( to bottom, #b275f0 0%, #ffc988 10%, #ffffff 90%); 
 }
 
 #video div{
