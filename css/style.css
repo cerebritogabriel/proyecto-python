@@ -26,7 +26,6 @@ h2{
 
 }
 .titulo{
-  
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -51,7 +50,7 @@ h5{
 .container-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/tyler-nix.jpg");
     background-color: #cccccc;
-    height: 100vh;
+    height: 750px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,23 +82,40 @@ h5{
     width: 100%;
     min-height: 750px;
     overflow: hidden;
-    padding: 30px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    
 }
 table{
+    border: 2px solid black;
     border-collapse: collapse;
-    margin: 30px 0 0px 0;
+    padding: 20px;
+    margin: 70px 20px 0 20px;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    justify-content: center;
+    
+
 }
 
 table li{
    margin: 10px;
    line-height: 130%;
+   text-align: justify;
+   font-weight: normal;
+   
   
 }
 
-
 td {
- padding:20px;
- border: 1px solid black;
+   line-height: 130%;
+   padding:20px;
+   border-bottom: 2px solid black;
+   font-weight: 700;
+   
+   
  
 }
 
@@ -121,7 +137,7 @@ header{
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;/**/
+    justify-content: space-around;/**/
     transition: 0.7s;
     padding: 2em;/**/
     z-index: 10;
@@ -146,7 +162,6 @@ header .logo{
     display: flex;
     justify-content: space-around;
     min-width: 200px;
-    
     
 }
 .nav-social a{
@@ -212,11 +227,7 @@ header ul li a{
     background-repeat: no-repeat;
    
 }
-section{
-    justify-content: center;
-    align-items: center;
 
-}
 
 header.abajo .logo,
 header.abajo ul li a{
@@ -241,14 +252,14 @@ header.abajo ul li a{
     justify-content: center;
     text-align: center;
     padding-left: 35px;
-    align-content: space-around; 
+    align-items: left;
 }
 
 .box1{
     text-align: left;
     flex: 1;/**/
     margin: 20px;
-    justify-content: left;
+    text-align: left;
     padding-top: 80px;
     
     
@@ -257,9 +268,9 @@ header.abajo ul li a{
     text-align: left;
     flex: 1;/**/
     line-height: 150%;
-    justify-content: left;
     margin: 20px;
-    
+    text-justify: none;
+    text-align: justify;
 }
 /****************/
 /*Flex-box*/
@@ -294,6 +305,7 @@ header.abajo ul li a{
     justify-content: center;
     border: 2px solid black;
     line-height: 100%;
+   
 
 }
 .card-gradient{
@@ -329,8 +341,8 @@ header.abajo ul li a{
     align-items: center;
     height: 700px;
     gap: 10px;
-    background-image: linear-gradient(to bottom, #f9cae5, #efcfec, #e6d4f0, #dfd8f1, #dadcf0, #dde0f0,
-     #e0e3f1, #e4e7f1, #ebedf4, #f2f3f8, #f9f9fb, #ffffff); 
+    background-image: linear-gradient(to bottom, #f9cae5, #f2d3ef, #eddcf6, #eae4f9, #eaebfa,
+     #edeffa, #f0f3fa, #f4f6fa, #f7f8fb, #fafafc, #fdfdfe, #ffffff);
 }
 
 #video div{
@@ -381,6 +393,7 @@ header.abajo ul li a{
 .div-2 p {
     line-height: 150%;
     padding-top: 30px ;
+    text-align: justify;
     
 }
 .img-flex{
@@ -486,13 +499,13 @@ input::placeholder {
     background-color: white;
     
 }
+/**grid**/
 .grid-inputs{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5em;
     
 }
-
 div,fieldset,label {
     border: none;
     outline: 0;
@@ -505,9 +518,6 @@ div,fieldset,label {
     margin: 0;
     padding: 0;
     
-}
-.terminos input{
-    display: flex;
 }
 /****BOTON ENVIAR****/
 .submit_btn {
@@ -531,7 +541,7 @@ div,fieldset,label {
 footer{
     position: relative;
     bottom: 0;
-    z-index: -1;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -541,7 +551,7 @@ footer{
     text-align: center;
     width: 100%;
     padding: 50px 0;
-  }
+}
 
 .logo-footer{
     height: 50px;
@@ -564,13 +574,17 @@ footer p{
     color: #ffffff;
     font-size: 12px;
 }
-.social-list{
+.footer-social{
+    padding: 0 1.875rem 1.25rem;
+    
+}
+.footer-social-list{
     display: flex;
-    justify-content: space-around;
-    min-width: 200px;
+    justify-content: center;
+    
 }
 
-.social-list a{
+.footer-social-list a{
     text-decoration: none;
     font-size: 15px;
     width: 40px;
@@ -584,6 +598,12 @@ footer p{
     outline: none;
     padding: 0;
     float: left;
+    
+}
+.footer-social-list li{
+    margin: 0.5rem;
+    font-size: 1.25rem;
+    list-style: none;
 }
 
 
@@ -618,6 +638,7 @@ footer p{
         bottom: 0;
         width: 100%;
     }
+    
     
 }
 
