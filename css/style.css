@@ -6,7 +6,7 @@
 body{
     background-color: #fff;
     color:black;
-    font-size: 18px;
+    font-size: 19px;
     font-family: 'Open Sans', sans-serif; /* Open Sans para el cuerpo */;
 }
 /*main*/
@@ -88,7 +88,7 @@ h5{
     
 }
 table{
-    border: 2px solid black;
+    
     border-collapse: collapse;
     padding: 20px;
     margin: 70px 20px 0 20px;
@@ -103,22 +103,28 @@ table{
 table li{
    margin: 10px;
    line-height: 130%;
-   text-align: justify;
+   text-justify: auto;
    font-weight: normal;
+   font-size: 20px;
    
-  
+   
+   
 }
 
 td {
    line-height: 130%;
    padding:20px;
-   border-bottom: 2px solid black;
    font-weight: 700;
-   
+   text-justify: inter-word;
    
  
 }
-
+.primerborde{
+    border-bottom: 2px solid black;
+}
+.segundoborde{
+    border-bottom: 2px solid black;
+}
 /****CONTAINER HEADER******/
 header{
     position: fixed;
@@ -247,37 +253,42 @@ header.abajo ul li a{
 /**** CAJA PADRE ***/
 .container-flex{
     display:flex;
-    width: 420px;/*ancho*/
+    width: 430px;/*ancho*/
     flex-direction: column;/**/
-    justify-content: center;
-    text-align: center;
-    padding-left: 35px;
+    justify-content: left;
+    text-align: left;
+    padding-left: 35px; 
     align-items: left;
+    
 }
 
 .box1{
-    text-align: left;
+    
     flex: 1;/**/
     margin: 20px;
-    text-align: left;
     padding-top: 80px;
     
     
 }
 .box2{
-    text-align: left;
+    
     flex: 1;/**/
     line-height: 150%;
+    text-justify: inter-word;
     margin: 20px;
-    text-justify: none;
-    text-align: justify;
+    width: 430px;
+    
+}
+.box2 p{
+    font-size: 20px;
+    
 }
 /****************/
 /*Flex-box*/
 .column{
     width: 500px;
     flex-direction: column;
-    text-align: center;
+    
 }
 .container-row{
     width: 100%;
@@ -295,7 +306,7 @@ header.abajo ul li a{
     width: 170px;
     height: 290px;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
     display: flex;
     flex-direction: column;/*Los elementos flexibles se colocan en una columna en el mismo sentido que
     el eje principal.*/
@@ -312,7 +323,7 @@ header.abajo ul li a{
     width: 170px;
     height: 290px;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
     display: flex;
     flex-direction: column;/*Los elementos flexibles se colocan en una columna en el mismo sentido que
     el eje principal.*/
@@ -369,16 +380,18 @@ header.abajo ul li a{
     justify-content:center;
     gap: 10px;
     overflow: hidden;
+    
    
 }
 .contenedor > div{
     justify-content:center ;
     padding: 30px;
     
+    
 }
 .div-1{
     flex:1;
-    width: 600px;
+    width: 500px;
     overflow: hidden;
     
 }
@@ -387,13 +400,16 @@ header.abajo ul li a{
     flex: 1;
     overflow: hidden;
     text-align: left;
-    padding-left: 50px;
-    margin-right: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 .div-2 p {
+    width: 460px;
     line-height: 150%;
-    padding-top: 30px ;
-    text-align: justify;
+    padding-top: 15px ;
+    margin-bottom: 25px;
+    text-justify: inter-word;
+    font-size: 20px;
     
 }
 .img-flex{
@@ -421,10 +437,12 @@ header.abajo ul li a{
 #form-contact{
     text-align: center;
     justify-content: center;
+    
 }
 
 .text-form{
-    margin: 3em 0 0 0;
+    
+    margin: 3em 0 3em 0;
 }
 .container{
     padding: 25px 30px;
@@ -619,6 +637,9 @@ footer p{
         width: 100%;
         display: block;
     }
+    .box2{
+        width: 310px;
+    }
     h1, h2 {
         font-size: 40px; /* Tamaño de fuente para h1 en pantalla pequeña */
     }
@@ -633,11 +654,15 @@ footer p{
     .div-1, .div-2{
         width: 100%;
     }
+    .div-2 p{
+        width: 380px;
+    }
 
     footer{
         bottom: 0;
         width: 100%;
     }
+    
     
     
 }
