@@ -147,7 +147,7 @@ header{
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;/**/
+    justify-content: space-between;/**/
     transition: 0.7s;
     padding: 2em;/**/
     z-index: 10;
